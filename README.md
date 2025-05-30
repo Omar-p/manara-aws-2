@@ -1,6 +1,6 @@
 # Scalable Web Application with ALB and Auto Scaling
 
-This document outlines the cloud architecture for the **Scalable Web Application with ALB and Auto Scaling**, implemented using core AWS services to ensure high availability, scalability, and secure operations. This solution does not include AWS CDK or CloudFormation templates, as per project requirements.
+This document outlines the cloud architecture for the **Scalable Web Application with ALB and Auto Scaling**, implemented using core AWS services to ensure high availability, scalability, and secure operations. This solution does not include AWS CDK or CloudFormation templates.
 
 ---
 
