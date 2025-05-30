@@ -30,7 +30,7 @@ This solution supports a secure, auto-scalable backend environment for processin
 
 ## Architecture Diagram
 
-![Architecture](./ec2-alb-diagram.pdf)
+![Architecture](./diagram/diagram.png)
 
 ---
 
@@ -48,6 +48,12 @@ This solution supports a secure, auto-scalable backend environment for processin
 
 * **Application Load Balancer (ALB):** Receives incoming traffic from **Route 53** and forwards it to a target **Auto Scaling Group (ASG)**.
 * **EC2 Instances:** Hosted in **private subnets**, serving application logic securely.
+* **Auto Scaling Policy:**
+
+  * The ASG is configured with a **target tracking scaling policy** based on the **ALB RequestCountPerTarget metric**.
+  * When the average number of requests per EC2 instance exceeds the threshold (e.g., 1000 requests per minute), additional instances are launched.
+  * Instances are terminated when demand drops below the threshold, ensuring cost-efficiency and responsiveness to load changes.
+
 
 
 ### Database
